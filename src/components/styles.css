@@ -1,0 +1,48 @@
+.swiper-wrapper {
+	display: flex;
+	justify-content: center;
+	padding-left: 20px;
+}
+
+.swiper {
+	width: 90%;
+	height: 400px;
+}
+/* 내부 글 */
+.swiper-slide {
+	background-color: aquamarine;
+	text-align: center;
+	font-size: 18px;
+	/* background: #fff; */
+
+	/* Center slide text vertically */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* 이미지 */
+.swiper-slide img {
+	background-color: #ff0000;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* */
+
+.auto-scroll-wrap {
+	margin-top: 50px;
+	.splide {
+		max-width: 800px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.splide__track {
+		overflow: visible;
+	}
+	.splide__slide img {
+		width: 100%;
+		height: auto;
+	}
+}
