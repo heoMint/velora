@@ -35,7 +35,7 @@ export default Community;
 const CommunityTitle = styled.div`
 	font-size: 2.3rem;
 	text-align: center;
-	margin-bottom: 50px;
+	margin-top: 200px;
 `;
 const BoxWrapper = styled.div`
 	display: flex;

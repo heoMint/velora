@@ -1,13 +1,19 @@
-import { useState, useEffect } from 'react';
 import { PiArrowLeftThin, PiArrowRightThin } from 'react-icons/pi';
-import styled from 'styled-components';
+import { ALLPRODUCTS } from '../context/Mockup';
+import { useProductsSlider } from '../hooks/useSlider';
+import { useProductsScroll } from '../hooks/useScroll';
+import styled, { keyframes } from 'styled-components';
 
 const AllProducts = () => {
-	const [selected, setSelected] = useState(0);
-	const [isHovered, setIsHovered] = useState(false);
 	const lastIndex = 5;
-	const pageSize = 4; // 한 페이지에 보여질 이미지 개수
+	const pageSize = 3; // 한 페이지에 보여질 이미지 개수
+	const intervalTime = 2000; // Interval time in milliseconds
 
+	const { selected, setSelected, setIsHovered } = useProductsSlider(
+		lastIndex,
+		intervalTime,
+	);
+	const { scrollY, isContentCardItem } = useProductsScroll();
 	const handlerPrev = () => {
 		setSelected((prevSelected) => (prevSelected - 1 + lastIndex) % lastIndex);
 	};
@@ -15,60 +21,9 @@ const AllProducts = () => {
 		setSelected((prevSelected) => (prevSelected + 1) % lastIndex);
 	};
 
-	useEffect(() => {
-		let intervalId;
-		if (!isHovered) {
-			intervalId = setInterval(() => {
-				setSelected((prevSelected) => (prevSelected + 1) % lastIndex);
-			}, 2000); // 1.5초마다 슬라이드 변경
-		}
-
-		// 구성 요소가 마운트 해제되거나 호버가 시작될 때 간격을 지우는 정리
-		return () => clearInterval(intervalId);
-	}, [isHovered]); // isHovered 상태 변경에 따라
-
-	// 이미지 목업 데이터
-	const images = [
-		{
-			id: 1,
-			url: '/src/assets/루나미니.jpeg',
-			title: '루나 미니 2',
-			num: '1ea',
-			price: '244,000원',
-		},
-		{
-			id: 2,
-			url: '/src/assets/에이지알 유쎄라 딥 샷.jpeg',
-			title: '에이지알 유쎄라 딥 샷',
-			num: '1ea',
-			price: '500,000원',
-		},
-		{
-			id: 3,
-			url: '/src/assets/스킨라이트 테라피.png',
-			title: '스킨라이트 테라피',
-			num: '1ea',
-			price: '200,000원',
-		},
-		{
-			id: 4,
-			url: '/src/assets/에이지알 더마 EMS 샷.jpeg',
-			title: '에이지알 더마 EMS 샷',
-			num: '1ea',
-			price: '458,000원',
-		},
-		{
-			id: 5,
-			url: '/src/assets/마데카프라임.jpeg',
-			title: '마데카 프라임',
-			num: '1ea',
-			price: '459,000원',
-		},
-	];
-
 	const renderImageCard = (image, index) => (
 		<CardWrapper key={image.id}>
-			<Card>
+			<Card isVisible={isContentCardItem}>
 				<ImageCard>
 					<Img src={image.url} alt={`Image ${index}`} />
 				</ImageCard>
@@ -85,23 +40,24 @@ const AllProducts = () => {
 		const endIndex = (startIndex + pageSize) % lastIndex;
 
 		if (startIndex <= endIndex) {
-			return images.slice(startIndex, endIndex + 1).map(renderImageCard);
+			return ALLPRODUCTS.slice(startIndex, endIndex + 1).map(renderImageCard);
 		} else {
 			return [
-				...images.slice(startIndex, lastIndex).map(renderImageCard),
-				...images.slice(0, endIndex + 1).map(renderImageCard),
+				...ALLPRODUCTS.slice(startIndex, lastIndex).map(renderImageCard),
+				...ALLPRODUCTS.slice(0, endIndex + 1).map(renderImageCard),
 			];
 		}
 	};
 
 	return (
 		<ProductsWrapper
-			onMouseEnter={() => setIsHovered(true)} /* hover시 슬라이드 중지 */
+			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
+			isVisible={scrollY >= 1500}
 		>
 			<div>
 				<Title>ALL PRODUCTS</Title>
-				<ButtonWrapper>
+				{/* <ButtonWrapper>
 					<ButtonBox>
 						<button onClick={handlerPrev}>
 							<PiArrowLeftThin />
@@ -112,7 +68,7 @@ const AllProducts = () => {
 							<PiArrowRightThin />
 						</button>
 					</ButtonRight>
-				</ButtonWrapper>
+				</ButtonWrapper> */}
 			</div>
 			<CarouselWrapper>{renderImages()}</CarouselWrapper>
 		</ProductsWrapper>
@@ -121,9 +77,37 @@ const AllProducts = () => {
 
 export default AllProducts;
 
+const scrollTop = keyframes`
+	  0% {
+    transform: translateY(100px);
+	opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+	opacity: 1;
+  }
+`;
+
+const fadeInRight = keyframes`
+	  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 const ProductsWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
+	width: 100%;
+	height: 100%;
+
+	opacity: ${(props) => (props.isVisible ? 1 : 0)};
+	animation: ${(props) => (props.isVisible ? scrollTop : 'none')} 0.6s
+		ease-in-out both;
+	transition: opacity 0.5s ease-in-out;
 `;
 const CarouselWrapper = styled.div`
 	width: 1440px;
@@ -131,11 +115,11 @@ const CarouselWrapper = styled.div`
 	justify-content: center;
 	overflow: hidden;
 	position: relative;
-	margin-left: 40px;
 `;
 const CardWrapper = styled.div`
 	overflow: hidden;
 	padding: 0 10px;
+	animation: ${fadeInRight} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 `;
 const Card = styled.div``;
 
@@ -158,8 +142,9 @@ const Img = styled.img`
 `;
 
 const Title = styled.div`
+	text-align: center;
 	font-size: 2.3rem;
-	margin-left: 50px;
+	margin: 100px 0;
 `;
 const ProductsTitle = styled.div`
 	font-size: 1.4rem;
@@ -176,7 +161,7 @@ const PriceWrapper = styled.div`
 const ButtonWrapper = styled.div`
 	display: flex;
 	justify-content: flex-end;
-	margin-right: 20px;
+	margin-right: 120px;
 	div {
 		display: flex;
 		align-items: center;
