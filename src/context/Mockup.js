@@ -145,3 +145,30 @@ export const LANKPRODUCTS = [
 		description: '딥 클렌징부터 스킨케어까지, 아티스트리 스마트 듀얼 솔루션',
 	},
 ];
+
+export const COMMENT = [
+	{
+		id: 1,
+		title: '이거 저만 이래요 ?',
+		time: '10분전',
+		num: '13',
+	},
+	{
+		id: 2,
+		title: '님들 앰플 뭐랑 같이써요?',
+		time: '11분전',
+		num: '1',
+	},
+	{
+		id: 3,
+		title: '에이지알 유쎄라 이제 안씀 ?',
+		time: '15분전',
+		num: '4',
+	},
+	{
+		id: 4,
+		title: '님들 이거',
+		time: '20분전',
+		num: '3',
+	},
+];

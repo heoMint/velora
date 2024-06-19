@@ -110,7 +110,8 @@ const ProductsWrapper = styled.div`
 	transition: opacity 0.5s ease-in-out;
 `;
 const CarouselWrapper = styled.div`
-	width: 1440px;
+	width: 100%;
+	flex-wrap: wrap;
 	display: flex;
 	justify-content: center;
 	overflow: hidden;
@@ -118,10 +119,11 @@ const CarouselWrapper = styled.div`
 `;
 const CardWrapper = styled.div`
 	overflow: hidden;
-	padding: 0 10px;
 	animation: ${fadeInRight} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 `;
-const Card = styled.div``;
+const Card = styled.div`
+	padding: 20px 10px;
+`;
 
 const ImageCard = styled.div`
 	display: flex;
@@ -132,8 +134,8 @@ const ImageCard = styled.div`
 	margin-bottom: 20px;
 `;
 const Img = styled.img`
-	width: 100%;
-	height: 300px;
+	width: 300px;
+	height: 100%;
 	border: 1px solid #777;
 	border-radius: 5px;
 
