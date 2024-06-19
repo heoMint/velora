@@ -29,7 +29,7 @@ const LankWrapper = styled.div`
 `;
 const LankTitle = styled.div`
 	margin-bottom: 100px;
-	font-size: 3rem;
+	font-size: 2.3rem;
 	font-weight: 500;
 `;
 const LankNum = styled.div`

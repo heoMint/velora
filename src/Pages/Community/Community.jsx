@@ -33,7 +33,7 @@ const Community = () => {
 export default Community;
 
 const CommunityTitle = styled.div`
-	font-size: 3rem;
+	font-size: 2.3rem;
 	text-align: center;
 	margin-bottom: 50px;
 `;
