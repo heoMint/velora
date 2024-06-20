@@ -44,7 +44,7 @@ const Lank = () => {
 			<LankWrapper
 				onMouseEnter={() => setIsHovered(true)}
 				onMouseLeave={() => setIsHovered(false)}
-				isVisible={scrollY >= 300}
+				isVisible={scrollY >= 200}
 			>
 				<LankTitle>
 					<div>디바이스</div>

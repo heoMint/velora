@@ -16,7 +16,7 @@ export const useLankScroll = () => {
 				setScrollY(window.scrollY);
 				// console.log(window.scrollY);
 
-				if (window.scrollY >= 300) {
+				if (window.scrollY >= 200) {
 					setIsContentCardItem(true);
 					setHasScrolledPast(true); // 추가 실행 방지를 위해 true로 설정
 				}
