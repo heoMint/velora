@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const EventBanner = () => {
 	return (
 		<EventBannerWrapper>
-			<img src="/eventbanner2.png" alt="event banner" />
+			<img src="/Frame 426.png" alt="event banner" />
 		</EventBannerWrapper>
 	);
 };
