@@ -53,7 +53,7 @@ const AllProducts = () => {
 		<ProductsWrapper
 			onMouseEnter={() => setIsHovered(true)}
 			onMouseLeave={() => setIsHovered(false)}
-			isVisible={scrollY >= 1500}
+			isVisible={scrollY >= 1000}
 		>
 			<div>
 				<Title>ALL PRODUCTS</Title>

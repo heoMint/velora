@@ -53,7 +53,7 @@ export const useProductsScroll = () => {
 				setScrollY(window.scrollY);
 				// console.log(window.scrollY);
 
-				if (window.scrollY >= 1500) {
+				if (window.scrollY >= 1000) {
 					setIsContentCardItem(true);
 					setHasScrolledPast(true);
 				}
