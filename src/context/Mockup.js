@@ -2,7 +2,7 @@
 export const ALLPRODUCTS = [
 	{
 		id: 1,
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/SpritePattern.png?raw=true',
+		url: 'https://heomint.github.io/velora/SpritePattern.png?raw=true',
 		title: '트리니티',
 		num: '1ea',
 		price: '244,000원',
