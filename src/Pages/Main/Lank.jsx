@@ -119,6 +119,7 @@ const LankTitle = styled.div`
 	font-weight: 300;
 	:nth-child(2) {
 		color: #ff3131;
+		font-size:2rem;
 		font-weight: 700;
 		font-style: italic;
 	}

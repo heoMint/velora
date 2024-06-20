@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable import/no-unresolved */
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as HashRouter, Routes, Route } from 'react-router-dom';
 import MainHome from './Pages/Main/view/MainHome';
 import Products from './Pages/Products/Products';
 import AboutUs from './Pages/AboutUs/AboutUs';
@@ -15,7 +15,7 @@ const queryClient = new QueryClient();
 function App() {
 	return (
 		<QueryClientProvider client={queryClient}>
-			<BrowserRouter>
+			<HashRouter>
 				<Header />
 				<Routes>
 					<Route path="/" element={<MainHome />} />
@@ -24,7 +24,7 @@ function App() {
 					<Route path="/community" element={<Community />} />
 					<Route path="/*" element={<NotFound />} />
 				</Routes>
-			</BrowserRouter>
+			</HashRouter>
 			<Footer />
 		</QueryClientProvider>
 	);
