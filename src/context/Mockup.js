@@ -2,7 +2,7 @@
 export const ALLPRODUCTS = [
 	{
 		id: 1,
-		url: '/trinity.jpe',
+		url: '/trinity.jpeg',
 		title: '트리니티',
 		num: '1ea',
 		price: '244,000원',
@@ -23,14 +23,14 @@ export const ALLPRODUCTS = [
 	},
 	{
 		id: 4,
-		url: '/agr-thema.jpeg/',
+		url: '/agr-thema.jpeg',
 		title: '에이지알 더마 EMS 샷',
 		num: '1ea',
 		price: '458,000원',
 	},
 	{
 		id: 5,
-		url: '/madeca.jpeg/',
+		url: '/madeca.jpeg',
 		title: '마데카 프라임',
 		num: '1ea',
 		price: '459,000원',
@@ -41,7 +41,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 1,
 		rank: '1위',
-		url: '/agr-pro.jpeg/',
+		url: '/agr-pro.jpeg',
 		brand: '메디큐브',
 		title: '에이지알 부스터 프로',
 		num: '1ea',
@@ -51,7 +51,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 2,
 		rank: '2위',
-		url: '/agr-usseara.jpeg/',
+		url: '/agr-usseara.jpeg',
 		brand: '메디큐브',
 		title: '에이지알 유세라 딥 샷',
 		num: '1ea',
@@ -61,7 +61,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 3,
 		rank: '3위',
-		url: '/trinity.jpeg/',
+		url: '/trinity.jpeg',
 		brand: '누페이스',
 		title: '트리니티',
 		num: '1ea',
@@ -72,7 +72,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 4,
 		rank: '4위',
-		url: '/skinlight.png/',
+		url: '/skinlight.png',
 		brand: '메이크온',
 		title: '스킨라이트 테라피',
 		num: '1ea',
@@ -83,7 +83,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 5,
 		rank: '5위',
-		url: '/agr-thema.jpeg/',
+		url: '/agr-thema.jpeg',
 		brand: '메디큐브',
 		title: '에이지알 더마 EMS 샷',
 		num: '1ea',
@@ -94,7 +94,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 6,
 		rank: '6위',
-		url: '/madeca.jpeg/',
+		url: '/madeca.jpeg',
 		brand: '센텔리안24',
 		title: '마데카 프라임',
 		num: '1ea',
@@ -104,7 +104,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 7,
 		rank: '7위',
-		url: '/masage.jpeg/',
+		url: '/masage.jpeg',
 		brand: '풀리오',
 		title: '종아리 마사지기',
 		num: '1ea',
@@ -115,7 +115,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 8,
 		rank: '8위',
-		url: '/snoi.jpeg/',
+		url: '/snoi.jpeg',
 		brand: '클렌슈어',
 		title: '프로페셔널 이온 마사지기 스노이',
 		num: '1ea',
