@@ -6,7 +6,7 @@ const Banner = () => {
 	return (
 		<BannerWrapper>
 			<ReactPlayer
-				url="/public/7234120-uhd_3840_2160_30fps.mp4"
+				url="./public/7234120-uhd_3840_2160_30fps.mp4"
 				playing={true}
 				muted={true}
 				loop={true}
@@ -14,8 +14,8 @@ const Banner = () => {
 				height="100%"
 			/>
 			<BannerTitle>
-				<h1>벨로라와 함께 당신의 광채를 발견해보세요!</h1>
-				<p>Velora - 아름다움과 혁신이 만나는 곳.</p>
+				<h1>벨로나와 함께 당신의 광채를 발견해보세요!</h1>
+				<p>Bellona - 아름다움과 혁신이 만나는 곳.</p>
 			</BannerTitle>
 		</BannerWrapper>
 	);
