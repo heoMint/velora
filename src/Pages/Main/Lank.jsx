@@ -84,6 +84,7 @@ const slideTopLank = keyframes`
 const RankBackground = styled.div`
 	position: relative;
 	top: -90px;
+
 	background-image: url('/src/assets/SpritePattern.png');
 	background-size: cover;
 `;
@@ -148,21 +149,18 @@ const LankNum = styled.div`
 	font-weight: 600;
 `;
 const Brand = styled.div`
-	color: #333;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #969595;
 	padding-top: 10px;
 `;
 const ProductsTitle = styled.div`
 	display: grid;
 	align-items: center;
+	width: 200px;
 	padding: 10px 0;
 	font-size: 1.3rem;
-`;
-const PriceWrapper = styled.div`
-	padding-bottom: 10px;
-`;
-const Price = styled.div``;
-const Description = styled.div`
-	width: 300px;
-	padding-top: 10px;
-	color: gray;
+	font-weight: 600;
 `;

@@ -57,7 +57,7 @@ const Comm = () => {
 									<FirstBox key={item.id}>
 										<div>
 											<Title>{item.title}</Title>
-											<div>{item.time}</div>
+											<Time>{item.time}</Time>
 										</div>
 										<Comment>
 											<BsChatRightQuote size={22} />
@@ -128,13 +128,17 @@ const FirstBox = styled.div`
 	justify-content: space-between;
 	padding: 30px;
 	margin: 10px 10px;
-	border: 1px solid gray;
+	box-shadow: rgba(99, 99, 99, 0.05) 0px 2px 8px 0px;
 	border-radius: 10px;
+	background-color: white;
 `;
 const Comment = styled.div`
 	display: flex;
 	align-items: center;
 `;
+const Time = styled.div`
+	color: gray;
+`
 const CommentNum = styled.div`
 	padding-left: 10px;
 `;

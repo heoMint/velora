@@ -158,36 +158,3 @@ const Num = styled.div``;
 const PriceWrapper = styled.div`
 	display: flex;
 `;
-
-// 오른쪽 왼쪽 버튼을 눌러 슬라이드 앞뒤로 넘기기
-
-const ButtonWrapper = styled.div`
-	display: flex;
-	justify-content: flex-end;
-	margin-right: 120px;
-	div {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 55px;
-		height: 55px;
-		margin-bottom: 30px;
-		border: 1px solid;
-		border-radius: 50%;
-
-		&:hover {
-			transition: 500ms ease;
-		}
-		button {
-			display: flex;
-			align-items: center;
-			font-size: 36px;
-			background-color: transparent;
-			border-style: none;
-		}
-	}
-`;
-const ButtonBox = styled.div``;
-const ButtonRight = styled.div`
-	margin: 0 10px;
-`;
