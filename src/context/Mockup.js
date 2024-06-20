@@ -9,28 +9,28 @@ export const ALLPRODUCTS = [
 	},
 	{
 		id: 2,
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/에이지알 유쎄라 딥 샷.jpeg/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/agr-usseara.jpeg',
 		title: '에이지알 유쎄라 딥 샷',
 		num: '1ea',
 		price: '500,000원',
 	},
 	{
 		id: 3,
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/스킨라이트 테라피.png',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/skinlight.png',
 		title: '스킨라이트 테라피',
 		num: '1ea',
 		price: '200,000원',
 	},
 	{
 		id: 4,
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/에이지알 더마 EMS 샷.jpeg/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/agr-thema.jpeg/',
 		title: '에이지알 더마 EMS 샷',
 		num: '1ea',
 		price: '458,000원',
 	},
 	{
 		id: 5,
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/마데카프라임.jpeg/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/madeca.jpeg/',
 		title: '마데카 프라임',
 		num: '1ea',
 		price: '459,000원',
@@ -41,7 +41,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 1,
 		rank: '1위',
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/에이지알부스터프로.jpeg/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/agr-pro.jpeg/',
 		brand: '메디큐브',
 		title: '에이지알 부스터 프로',
 		num: '1ea',
@@ -51,7 +51,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 2,
 		rank: '2위',
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/에이지알 유쎄라 딥 샷.jpeg/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/agr-usseara.jpeg/',
 		brand: '메디큐브',
 		title: '에이지알 유세라 딥 샷',
 		num: '1ea',
@@ -61,7 +61,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 3,
 		rank: '3위',
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/트리니티.jpeg/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/trinity.jpeg/',
 		brand: '누페이스',
 		title: '트리니티',
 		num: '1ea',
@@ -72,7 +72,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 4,
 		rank: '4위',
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/스킨라이트 테라피.png/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/skinlight.png/',
 		brand: '메이크온',
 		title: '스킨라이트 테라피',
 		num: '1ea',
@@ -83,7 +83,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 5,
 		rank: '5위',
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/에이지알 더마 EMS 샷.jpeg/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/agr-thema.jpeg/',
 		brand: '메디큐브',
 		title: '에이지알 더마 EMS 샷',
 		num: '1ea',
@@ -94,7 +94,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 6,
 		rank: '6위',
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/마데카프라임.jpeg/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/madeca.jpeg/',
 		brand: '센텔리안24',
 		title: '마데카 프라임',
 		num: '1ea',
@@ -104,7 +104,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 7,
 		rank: '7위',
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/종아리마사지기.jpeg/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/masage.jpeg/',
 		brand: '풀리오',
 		title: '종아리 마사지기',
 		num: '1ea',
@@ -115,7 +115,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 8,
 		rank: '8위',
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/프로페셔널 이온 마사지기스노이.jpeg/',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/snoi.jpeg/',
 		brand: '클렌슈어',
 		title: '프로페셔널 이온 마사지기 스노이',
 		num: '1ea',
@@ -126,7 +126,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 9,
 		rank: '9위',
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/타임머신.png',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/time.png',
 		brand: '바나브',
 		title: '타임머신',
 		num: '1ea',
@@ -137,7 +137,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 10,
 		rank: '10위',
-		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/더마소닉.jpeg',
+		url: 'https://raw.github.com/heoMint/velora/blob/main/src/assets/themasonic.jpeg',
 		brand: '아티스트리',
 		title: '더마소닉',
 		num: '2ea',
