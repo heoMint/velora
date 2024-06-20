@@ -7,9 +7,10 @@
 		"dev": "vite",
 		"build": "vite build",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"deploy": "gh-pages -d build"
 	},
-	"homepage": "http://heomint.github.io/velora/",
+	"homepage": "https://heomint.github.io/velora/",
 	"dependencies": {
 		"@lottiefiles/dotlottie-react": "^0.6.4",
 		"@splidejs/react-splide": "^0.7.12",
