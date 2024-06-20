@@ -2,7 +2,6 @@
 
 > 뷰티 디바이스 사용 순위를 업로드 커뮤니티 👉 사이트주소
 
-
 ## 📖 Description
 
 ## 🐤 Demo
@@ -71,6 +70,7 @@ src
 └── ser
 
 ---
+
 👨‍💻 Role & Contribution
 Frontend (Web)
 
@@ -83,6 +83,7 @@ CI/CD 구축 (Docker, Github Action)
 etc
 
 전체 개발 일정 및 이슈 관리
+
 ## 👨‍👩‍👧‍👦 Developer
 
 허도원 (heoMint)
