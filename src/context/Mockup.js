@@ -2,35 +2,35 @@
 export const ALLPRODUCTS = [
 	{
 		id: 1,
-		url: `${import.meta.env.VITE_PUBLIC_URL}/트리니티.jpeg`,
+		url: '/public/트리니티.jpeg',
 		title: '트리니티',
 		num: '1ea',
 		price: '244,000원',
 	},
 	{
 		id: 2,
-		url: `${import.meta.env.VITE_PUBLIC_URL}/에이지알 유쎄라 딥 샷.jpeg`,
+		url: '/public/에이지알 유쎄라 딥 샷.jpeg',
 		title: '에이지알 유쎄라 딥 샷',
 		num: '1ea',
 		price: '500,000원',
 	},
 	{
 		id: 3,
-		url: `${import.meta.env.VITE_PUBLIC_URL}/스킨라이트 테라피.png`,
+		url: '/public/스킨라이트 테라피.png',
 		title: '스킨라이트 테라피',
 		num: '1ea',
 		price: '200,000원',
 	},
 	{
 		id: 4,
-		url: `${import.meta.env.VITE_PUBLIC_URL}/에이지알 더마 EMS 샷.jpeg`,
+		url: '/public/에이지알 더마 EMS 샷.jpeg',
 		title: '에이지알 더마 EMS 샷',
 		num: '1ea',
 		price: '458,000원',
 	},
 	{
 		id: 5,
-		url: `${import.meta.env.VITE_PUBLIC_URL}/마데카프라임.jpeg`,
+		url: '/public/마데카프라임.jpeg',
 		title: '마데카 프라임',
 		num: '1ea',
 		price: '459,000원',
@@ -41,7 +41,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 1,
 		rank: '1위',
-		url: `${import.meta.env.VITE_PUBLIC_URL}/에이지알부스터프로.jpeg`,
+		url: '/public/에이지알부스터프로.jpeg',
 		brand: '메디큐브',
 		title: '에이지알 부스터 프로',
 		num: '1ea',
@@ -51,7 +51,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 2,
 		rank: '2위',
-		url: `${import.meta.env.VITE_PUBLIC_URL}/에이지알 유쎄라 딥 샷.jpeg`,
+		url: '/public/에이지알 유쎄라 딥 샷.jpeg',
 		brand: '메디큐브',
 		title: '에이지알 유세라 딥 샷',
 		num: '1ea',
@@ -61,7 +61,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 3,
 		rank: '3위',
-		url: `${import.meta.env.VITE_PUBLIC_URL}/트리니티.jpeg`,
+		url: '/public/트리니티.jpeg',
 		brand: '누페이스',
 		title: '트리니티',
 		num: '1ea',
@@ -72,7 +72,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 4,
 		rank: '4위',
-		url: `${import.meta.env.VITE_PUBLIC_URL}/스킨라이트 테라피.png`,
+		url: '/public/스킨라이트 테라피.png',
 		brand: '메이크온',
 		title: '스킨라이트 테라피',
 		num: '1ea',
@@ -83,7 +83,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 5,
 		rank: '5위',
-		url: `${import.meta.env.VITE_PUBLIC_URL}/에이지알 더마 EMS 샷.jpeg`,
+		url: '/public/에이지알 더마 EMS 샷.jpeg',
 		brand: '메디큐브',
 		title: '에이지알 더마 EMS 샷',
 		num: '1ea',
@@ -94,7 +94,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 6,
 		rank: '6위',
-		url: `${import.meta.env.VITE_PUBLIC_URL}/마데카프라임.jpeg`,
+		url: '/public/마데카프라임.jpeg',
 		brand: '센텔리안24',
 		title: '마데카 프라임',
 		num: '1ea',
@@ -104,7 +104,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 7,
 		rank: '7위',
-		url: `${import.meta.env.VITE_PUBLIC_URL}/마데카프라임.jpeg`,
+		url: '/public/마데카프라임.jpeg',
 		brand: '풀리오',
 		title: '종아리 마사지기',
 		num: '1ea',
@@ -115,7 +115,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 8,
 		rank: '8위',
-		url: `${import.meta.env.VITE_PUBLIC_URL}/프로페셔널 이온 마사지기스노이.jpeg`,
+		url: '/public/프로페셔널 이온 마사지기스노이.jpeg',
 		brand: '클렌슈어',
 		title: '프로페셔널 이온 마사지기 스노이',
 		num: '1ea',
@@ -126,7 +126,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 9,
 		rank: '9위',
-		url: `${import.meta.env.VITE_PUBLIC_URL}/타임머신.png`,
+		url: '/public/타임머신.png',
 		brand: '바나브',
 		title: '타임머신',
 		num: '1ea',
@@ -137,7 +137,7 @@ export const LANKPRODUCTS = [
 	{
 		id: 10,
 		rank: '10위',
-		url: `${import.meta.env.VITE_PUBLIC_URL}/더마소닉.jpeg`,
+		url: '/public/더마소닉.jpeg',
 		brand: '아티스트리',
 		title: '종아리 마사지기',
 		num: '2ea',

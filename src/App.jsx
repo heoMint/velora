@@ -15,7 +15,7 @@ const queryClient = new QueryClient();
 function App() {
 	return (
 		<QueryClientProvider client={queryClient}>
-			<BrowserRouter basename={import.meta.VITE_PUBLIC_URL}>
+			<BrowserRouter>
 				<Header />
 				<Routes>
 					<Route path="/" element={<MainHome />} />

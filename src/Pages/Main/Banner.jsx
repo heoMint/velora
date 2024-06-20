@@ -6,7 +6,7 @@ const Banner = () => {
 	return (
 		<BannerWrapper>
 			<ReactPlayer
-				url={`${import.meta.env.VITE_PUBLIC_URL}/7234120-uhd_3840_2160_30fps.mp4`}
+				url='/public/7234120-uhd_3840_2160_30fps.mp4'
 				playing={true}
 				muted={true}
 				loop={true}
