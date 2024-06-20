@@ -16,6 +16,8 @@ const Header = () => {
 						src="https://raw.githubusercontent.com/heoMint/velora/main/public/Velora.png"
 						alt="Logo"
 					/>
+
+					<img src="Velora.png" alt="Logo" />
 				</Link>
 			</Log>
 			<Nav>
