@@ -85,7 +85,7 @@ const RankBackground = styled.div`
 	position: relative;
 	top: -90px;
 
-	background-image: url('/src/assets/SpritePattern.png');
+	background-image: url('/SpritePattern.png');
 	background-size: cover;
 `;
 const CarouselWrapper = styled.div`
