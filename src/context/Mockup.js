@@ -2,7 +2,7 @@
 export const ALLPRODUCTS = [
 	{
 		id: 1,
-		url: '/src/assets/트리니티.jpeg/',
+		url: '/트리니티.jpeg',
 		title: '트리니티',
 		num: '1ea',
 		price: '244,000원',
