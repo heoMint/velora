@@ -12,7 +12,10 @@ const Header = () => {
 		<NavWrapper>
 			<Log>
 				<Link to="/">
-					<img src="/public/Velora.png" alt="Logo" />
+					<img
+						src="https://raw.githubusercontent.com/heoMint/velora/main/public/Velora.png"
+						alt="Logo"
+					/>
 				</Link>
 			</Log>
 			<Nav>

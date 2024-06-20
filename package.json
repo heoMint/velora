@@ -8,10 +8,9 @@
 		"build": "vite build",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
-		"predeploy": "npm run build",
 		"deploy": "gh-pages -d build"
 	},
-	"homepage": "https://velora.netlify.app",
+	"homepage": "https://heomint.github.io/velora/",
 	"dependencies": {
 		"@lottiefiles/dotlottie-react": "^0.6.4",
 		"@splidejs/react-splide": "^0.7.12",
