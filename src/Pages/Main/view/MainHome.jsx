@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Banner from '../Banner';
 import Lank from '../Lank';
 import EventBanner from '../../../components/EventBanner';
-import AllProducts from '../../../components/AllProducts';
-import Community from '../../Community/Community';
+import AllProducts from '../AllProducts';
+import Comm from '../Comm';
 
 const MainHome = () => {
 	return (
@@ -13,7 +13,7 @@ const MainHome = () => {
 			<Lank />
 			<EventBanner />
 			<AllProducts />
-			<Community />
+			<Comm />
 		</>
 	);
 };

@@ -3,3 +3,19 @@
 	padding: 0;
 	/* box-sizing: border-box; */
 }
+
+@keyframes scroll-top {
+	0% {
+		transform: translateY(100px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+.scroll-up {
+	opacity: 1;
+	animation: scroll-top 0.6s ease-in-out both;
+	transition: opacity 0.5s ease-in-out;
+}

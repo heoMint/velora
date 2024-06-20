@@ -5,7 +5,7 @@ import { useLankScroll } from '../../hooks/useScroll';
 
 const Lank = () => {
 	const lastIndex = 10;
-	const pageSize = 1; // 한 페이지에 보여질 이미지 개수
+	const pageSize = 4; // 한 페이지에 보여질 이미지 개수
 	const intervalTime = 3000;
 	const { selected, setIsHovered } = useLankSlider(lastIndex, intervalTime);
 	const { isContentCardItem } = useLankScroll();
@@ -14,17 +14,15 @@ const Lank = () => {
 		<CardWrapper key={item.id}>
 			<Card isVisible={isContentCardItem}>
 				<LankNum>{item.rank}</LankNum>
-				<ImageCard>
-					<Img src={item.url} alt={`Image ${index}`} />
-				</ImageCard>
-				<LankText>
-					<Brand>{item.brand}</Brand>
-					<ProductsTitle>{item.title}</ProductsTitle>
-					<PriceWrapper>
-						<Price>{`${item.num} / ${item.price}`}</Price>
-					</PriceWrapper>
-					<Description>{item.description}</Description>
-				</LankText>
+				<ItemWrapper>
+					<ImageCard>
+						<Img src={item.url} alt={`Image ${index}`} />
+					</ImageCard>
+					<LankText>
+						<Brand>{item.brand}</Brand>
+						<ProductsTitle>{item.title}</ProductsTitle>
+					</LankText>
+				</ItemWrapper>
 			</Card>
 		</CardWrapper>
 	);
@@ -42,16 +40,21 @@ const Lank = () => {
 		}
 	};
 	return (
-		<LankWrapper
-			onMouseEnter={() => setIsHovered(true)}
-			onMouseLeave={() => setIsHovered(false)}
-			isVisible={scrollY >= 400}
-		>
-			<LankTitle>실시간 디바이스 LANK</LankTitle>
-			<LankList>
-				<CarouselWrapper>{renderImages()}</CarouselWrapper>
-			</LankList>
-		</LankWrapper>
+		<RankBackground>
+			<LankWrapper
+				onMouseEnter={() => setIsHovered(true)}
+				onMouseLeave={() => setIsHovered(false)}
+				isVisible={scrollY >= 300}
+			>
+				<LankTitle>
+					<div>디바이스</div>
+					<div>LANK</div>
+				</LankTitle>
+				<LankList>
+					<CarouselWrapper>{renderImages()}</CarouselWrapper>
+				</LankList>
+			</LankWrapper>
+		</RankBackground>
 	);
 };
 
@@ -59,11 +62,11 @@ export default Lank;
 
 const slideTop = keyframes`
 	 0% {
-    transform: translateY(70px);
+    transform: translateX(70px);
 	opacity: 0;
   }
   100% {
-    transform: translateY(0px);
+    transform: translateX(0px);
 	opacity: 1;
   }
 `;
@@ -78,51 +81,69 @@ const slideTopLank = keyframes`
 	opacity: 1;
   }
 `;
-
+const RankBackground = styled.div`
+	position: relative;
+	top: -90px;
+	background-image: url('/src/assets/SpritePattern.png');
+	background-size: cover;
+`;
 const CarouselWrapper = styled.div`
-	height: 500px;
+	height: 400px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-left: 100px;
 `;
 const LankWrapper = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 100%;
 	height: 100%;
-	margin-top: 50px;
 
 	opacity: ${(props) => (props.isVisible ? 1 : 0)};
 	animation: ${(props) => (props.isVisible ? slideTopLank : 'none')} 0.6s
 		ease-in-out both;
 	transition: opacity 0.5s ease-in-out;
 `;
+const ItemWrapper = styled.div``;
 const LankTitle = styled.div`
-	text-align: center;
-	margin-bottom: 100px;
-	font-size: 2.3rem;
-	font-weight: 500;
+	position: absolute;
+	top: 100px;
+	left: 80px;
+	text-align: left;
+
+	font-size: 1.6rem;
+	font-weight: 300;
+	:nth-child(2) {
+		color: #ff3131;
+		font-weight: 700;
+		font-style: italic;
+	}
 `;
-const LankList = styled.div`
-	display: grid;
-	justify-content: center;
-`;
+const LankList = styled.div``;
 
 const LankText = styled.div``;
 const CardWrapper = styled.div`
-	padding-bottom: 40px;
+	padding: 40px 0;
 `;
 const Card = styled.div`
 	display: flex;
+	text-align: center;
 
 	animation: ${slideTop} 0.3s ease-in-out;
 `;
 const ImageCard = styled.div``;
 const Img = styled.img`
-	width: 150px;
-	height: 150px;
-	border: 1px solid black;
-	border-radius: 3px;
-	margin-right: 30px;
+	width: 180px;
+	height: 180px;
+	border: 5px solid #f1f1f1;
+	border-radius: 100%;
 `;
 
 const LankNum = styled.div`
-	padding: 10px 20px 0 0;
+	padding: 10px 10px 0 0;
 	font-size: 1.2rem;
 	font-weight: 600;
 `;
@@ -139,9 +160,7 @@ const ProductsTitle = styled.div`
 const PriceWrapper = styled.div`
 	padding-bottom: 10px;
 `;
-const Price = styled.div`
-	margin-right: 30px;
-`;
+const Price = styled.div``;
 const Description = styled.div`
 	width: 300px;
 	padding-top: 10px;

@@ -1,7 +1,7 @@
 import { PiArrowLeftThin, PiArrowRightThin } from 'react-icons/pi';
-import { ALLPRODUCTS } from '../context/Mockup';
-import { useProductsSlider } from '../hooks/useSlider';
-import { useProductsScroll } from '../hooks/useScroll';
+import { ALLPRODUCTS } from '../../context/Mockup';
+import { useProductsSlider } from '../../hooks/useSlider';
+import { useProductsScroll } from '../../hooks/useScroll';
 import styled, { keyframes } from 'styled-components';
 
 const AllProducts = () => {
@@ -14,12 +14,12 @@ const AllProducts = () => {
 		intervalTime,
 	);
 	const { scrollY, isContentCardItem } = useProductsScroll();
-	const handlerPrev = () => {
-		setSelected((prevSelected) => (prevSelected - 1 + lastIndex) % lastIndex);
-	};
-	const handlerNext = () => {
-		setSelected((prevSelected) => (prevSelected + 1) % lastIndex);
-	};
+	// const handlerPrev = () => {
+	// 	setSelected((prevSelected) => (prevSelected - 1 + lastIndex) % lastIndex);
+	// };
+	// const handlerNext = () => {
+	// 	setSelected((prevSelected) => (prevSelected + 1) % lastIndex);
+	// };
 
 	const renderImageCard = (image, index) => (
 		<CardWrapper key={image.id}>
@@ -116,6 +116,7 @@ const CarouselWrapper = styled.div`
 	justify-content: center;
 	overflow: hidden;
 	position: relative;
+	margin-bottom: 100px;
 `;
 const CardWrapper = styled.div`
 	overflow: hidden;

@@ -8,23 +8,25 @@ import NotFound from './components/NotFound';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Community from './Pages/Community/Community';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 function App() {
 	return (
-		<>
-			
+		<QueryClientProvider client={queryClient}>
 			<BrowserRouter>
 				<Header />
 				<Routes>
 					<Route path="/" element={<MainHome />} />
 					<Route path="/products" element={<Products />} />
-					<Route path="/aboutus" element={<AboutUs />} />
+					<Route path="/about-us" element={<AboutUs />} />
 					<Route path="/community" element={<Community />} />
 					<Route path="/*" element={<NotFound />} />
 				</Routes>
 			</BrowserRouter>
 			<Footer />
-		</>
+		</QueryClientProvider>
 	);
 }
 
