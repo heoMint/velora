@@ -12,7 +12,7 @@ const Header = () => {
 		<NavWrapper>
 			<Log>
 				<Link to="/">
-					<img src="/Velora.png" alt="Logo" />
+					<img src="/public/Velora.png" alt="Logo" />
 				</Link>
 			</Log>
 			<Nav>
@@ -116,7 +116,7 @@ const Depth = styled.ul`
 const Log = styled.div`
 	position: absolute;
 	top: 35%;
-	left: 10px;
+	left: 30px;
 	img {
 		width: 100px;
 	}
