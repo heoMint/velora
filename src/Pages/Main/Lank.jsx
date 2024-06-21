@@ -6,7 +6,7 @@ import { useLankScroll } from '../../hooks/useScroll';
 const Lank = () => {
 	const lastIndex = 10;
 	const pageSize = 4; // 한 페이지에 보여질 이미지 개수
-	const intervalTime = 3000;
+	const intervalTime = 300000;
 	const { selected, setIsHovered } = useLankSlider(lastIndex, intervalTime);
 	const { isContentCardItem } = useLankScroll();
 
@@ -41,19 +41,21 @@ const Lank = () => {
 	};
 	return (
 		<RankBackground>
-			<LankWrapper
-				onMouseEnter={() => setIsHovered(true)}
-				onMouseLeave={() => setIsHovered(false)}
-				isVisible={scrollY >= 200}
-			>
-				<LankTitle>
-					<div>디바이스</div>
-					<div>LANK</div>
-				</LankTitle>
-				<LankList>
-					<CarouselWrapper>{renderImages()}</CarouselWrapper>
-				</LankList>
-			</LankWrapper>
+			<div className="container">
+				<LankWrapper
+					onMouseEnter={() => setIsHovered(true)}
+					onMouseLeave={() => setIsHovered(false)}
+					isVisible={scrollY >= 200}
+				>
+					<LankTitle>
+						<div>디바이스</div>
+						<div>LANK</div>
+					</LankTitle>
+					<LankList>
+						<CarouselWrapper>{renderImages()}</CarouselWrapper>
+					</LankList>
+				</LankWrapper>
+			</div>
 		</RankBackground>
 	);
 };
@@ -82,13 +84,14 @@ const slideTopLank = keyframes`
   }
 `;
 const RankBackground = styled.div`
-	position: relative;
-	top: -90px;
-	background-image: url('/SpritePattern.png');
-	background-size: contain;
-`;
+  /* background-image: url('/SpritePattern.png'); */
+	overflow: hidden;
+	background-size: cover;
+	padding: 100px 0;
+
 const LankList = styled.div`
 	display: flex;
+
 `;
 const CarouselWrapper = styled.div`
 	transform: translate(13%, 0);
@@ -97,6 +100,9 @@ const CarouselWrapper = styled.div`
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+
+	margin-left: 220px;
+
 	@media (max-width: 767px) {
 		flex-wrap: wrap;
 		height: 500px;
@@ -124,12 +130,14 @@ const ItemWrapper = styled.div`
 `;
 const LankTitle = styled.div`
 	position: absolute;
-	top: 80px;
-	left: 40px;
+
+	top: 100px;
+	left: 0;
 	text-align: left;
 
 	font-size: 1.6rem;
 	font-weight: 300;
+	color: #111;
 	:nth-child(2) {
 		color: #ff3131;
 		font-size: 2rem;
@@ -161,16 +169,31 @@ const Card = styled.div`
 		text-align: left;
 	}
 `;
-const ImageCard = styled.div``;
+
+const ImageCard = styled.div`
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 180px;
+	height: 180px;
+	margin-bottom: 10px;
+	border: 1px solid #e4e4e4;
+
+
 const Img = styled.img`
 	width: 150px;
 	height: 150px;
 	border: 5px solid #f1f1f1;
+
 	border-radius: 100%;
 	@media (max-width: 767px) {
 		width: 60px;
 		height: 60px;
 	}
+`;
+const Img = styled.img`
+	width: 70%;
 `;
 
 const LankNum = styled.div`
@@ -179,9 +202,13 @@ const LankNum = styled.div`
 	margin-right: -10px;
 	font-size: 1.2rem;
 	font-weight: 600;
+
+	color: #111;
+
 	@media (max-width: 767px) {
 		margin-right: 10px;
 	}
+
 `;
 const Brand = styled.div`
 	text-align: center;
@@ -198,14 +225,19 @@ const Brand = styled.div`
 const ProductsTitle = styled.div`
 	display: grid;
 	align-items: flex-start;
+
 	width: 200px;
+	height: 70px;
 	padding: 10px 0;
 	font-size: 1.3rem;
 	font-weight: 600;
+	color: #111;
+
 	@media (max-width: 767px) {
 		width: 200px;
 		padding-left: 10px;
 		font-size: 1.2rem;
 		justify-content: flex-start;
 	}
+
 `;

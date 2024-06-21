@@ -7,7 +7,7 @@ import styled, { keyframes } from 'styled-components';
 const AllProducts = () => {
 	const lastIndex = 5;
 	const pageSize = 3; // 한 페이지에 보여질 이미지 개수
-	const intervalTime = 2000; // Interval time in milliseconds
+	const intervalTime = 300000; // Interval time in milliseconds
 
 	const { selected, setSelected, setIsHovered } = useProductsSlider(
 		lastIndex,
@@ -134,12 +134,13 @@ const ImageCard = styled.div`
 	justify-content: center;
 	align-items: center;
 
+	width: 300px;
+	height: 300px;
+	border: 1px solid #e4e4e4;
 	margin-bottom: 20px;
 `;
 const Img = styled.img`
-	width: 300px;
-	height: 100%;
-	border: 1px solid #777;
+	width: 80%;
 	border-radius: 5px;
 
 	background-size: cover;
@@ -152,14 +153,19 @@ const Img = styled.img`
 const Title = styled.div`
 	text-align: center;
 	font-size: 2.3rem;
+	margin: 150px 0 50px;
+	color: #111;
 
-	margin: 100px 0;
 `;
 const ProductsTitle = styled.div`
+	margin-bottom: 10px;
 	font-size: 1.4rem;
-	font-weight: 600;
+	color: #111;
 `;
-const Num = styled.div``;
+const Num = styled.div`
+	font-weight: 600;
+
+`;
 
 const PriceWrapper = styled.div`
 	display: flex;
