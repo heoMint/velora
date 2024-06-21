@@ -155,7 +155,6 @@ const Title = styled.div`
 	font-size: 2.3rem;
 	margin: 150px 0 50px;
 	color: #111;
-
 `;
 const ProductsTitle = styled.div`
 	margin-bottom: 10px;
@@ -164,7 +163,6 @@ const ProductsTitle = styled.div`
 `;
 const Num = styled.div`
 	font-weight: 600;
-
 `;
 
 const PriceWrapper = styled.div`

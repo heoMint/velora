@@ -18,7 +18,6 @@ const EventBannerWrapper = styled.div`
 	overflow: hidden;
 	img {
 		border-radius: 10px;
-
 		width: 90%;
 	}
 	@media (max-width: 767px) {

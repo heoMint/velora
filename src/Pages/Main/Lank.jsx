@@ -84,14 +84,14 @@ const slideTopLank = keyframes`
   }
 `;
 const RankBackground = styled.div`
-  /* background-image: url('/SpritePattern.png'); */
+	/* background-image: url('/SpritePattern.png'); */
 	overflow: hidden;
 	background-size: cover;
 	padding: 100px 0;
+`;
 
 const LankList = styled.div`
 	display: flex;
-
 `;
 const CarouselWrapper = styled.div`
 	transform: translate(13%, 0);
@@ -179,21 +179,17 @@ const ImageCard = styled.div`
 	height: 180px;
 	margin-bottom: 10px;
 	border: 1px solid #e4e4e4;
-
+`;
 
 const Img = styled.img`
 	width: 150px;
 	height: 150px;
 	border: 5px solid #f1f1f1;
-
 	border-radius: 100%;
 	@media (max-width: 767px) {
 		width: 60px;
 		height: 60px;
 	}
-`;
-const Img = styled.img`
-	width: 70%;
 `;
 
 const LankNum = styled.div`
@@ -208,7 +204,6 @@ const LankNum = styled.div`
 	@media (max-width: 767px) {
 		margin-right: 10px;
 	}
-
 `;
 const Brand = styled.div`
 	text-align: center;
@@ -239,5 +234,4 @@ const ProductsTitle = styled.div`
 		font-size: 1.2rem;
 		justify-content: flex-start;
 	}
-
 `;

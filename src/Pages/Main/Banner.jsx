@@ -22,8 +22,6 @@ const Banner = () => {
 				width="100%"
 				height="600px"
 			/>
-
-			
 		</BannerWrapper>
 	);
 };
@@ -57,11 +55,9 @@ const BannerTitle = styled.div`
 			font-weight: 400;
 		}
 	}
-
 `;
 
 const BannerWrapper = styled.div`
-
 	/* position: relative; /* 수정된 부분: absolute -> relative */
 	/* top: -90px; */
 	/* height: 70vh; */
