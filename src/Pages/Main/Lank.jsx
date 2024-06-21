@@ -94,7 +94,6 @@ const LankList = styled.div`
 	display: flex;
 `;
 const CarouselWrapper = styled.div`
-
 	height: 400px;
 	width: 100%;
 	display: flex;
@@ -105,8 +104,6 @@ const CarouselWrapper = styled.div`
 		flex-wrap: wrap;
 		height: 500px;
 		padding: 30px 0;
-
-		transform: translateX(6%);
 	}
 `;
 
