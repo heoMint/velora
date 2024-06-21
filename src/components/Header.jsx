@@ -90,7 +90,6 @@ const NavWrapper = styled.header`
 	/* background: rgba(255, 255, 255, 0.13);
 	backdrop-filter: blur(2px);
 	-webkit-backdrop-filter: blur(3px); */
-	border-bottom: 1px solid #eee;
 `;
 
 const Nav = styled.div`

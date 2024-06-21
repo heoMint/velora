@@ -14,14 +14,16 @@ const Banner = () => {
 					<p>Bellona - 아름다움과 혁신이 만나는 곳.</p>
 				</div>
 			</BannerTitle>
-			<ReactPlayer
-				url="https://youtu.be/dNtojNULqyg?si=0DrKpL6yTm2F6m46"
-				playing={true}
-				muted={true}
-				loop={true}
-				width="100%"
-				height="600px"
-			/>
+			<VideoWrapper>
+				<ReactPlayer
+					url="/videoplayback.mp4"
+					playing={true}
+					muted={true}
+					loop={true}
+					width="100%"
+					height="600px"
+				/>
+			</VideoWrapper>
 		</BannerWrapper>
 	);
 };
@@ -39,31 +41,29 @@ const opacity = keyframes`
 `;
 
 const BannerTitle = styled.div`
-	/* position: absolute;
-	top: 50%;
-	transform: translateY(-30%); */
-	/* margin-left: 100px; */
-	padding: 60px 0;
+	padding: 100px 0 0 50px;
 	color: #222;
-	/* color: white; */
 
 	animation: ${opacity} 2s ease;
 	strong {
-		font-size: 3.5rem;
+		font-size: 3rem;
 		margin-bottom: -10px;
 		span {
 			font-weight: 400;
 		}
 	}
 `;
-
-const BannerWrapper = styled.div`
-	/* position: relative; /* 수정된 부분: absolute -> relative */
-	/* top: -90px; */
-	/* height: 70vh; */
-	background-color: #fff;
+const VideoWrapper = styled.div`
+	display: flex;
+	justify-content: flex-end;
+	width: 60%;
 	video {
-		height: 800px;
+		border-radius: 40% 0 0 0/ 60% 0 0 0;
 		object-fit: cover;
 	}
+`;
+const BannerWrapper = styled.div`
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
 `;
