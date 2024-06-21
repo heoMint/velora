@@ -72,7 +72,7 @@ const Comm = () => {
 					<div ref={loadMoreRef} style={{ height: '150px' }}>
 						{isFetchingNextPage ? (
 							<DotLottieReact
-								src="https://github.com/heoMint/velora/blob/main/src/assets/Animation%20-%201718932225127.json"
+								src="/Animation%20-%201718932225127.json"
 								loop
 								autoplay
 							/>
@@ -142,7 +142,7 @@ const Comment = styled.div`
 `;
 const Time = styled.div`
 	color: gray;
-`
+`;
 const CommentNum = styled.div`
 	padding-left: 10px;
 `;
