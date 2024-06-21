@@ -71,7 +71,7 @@ const Comm = () => {
 				{hasNextPage && (
 					<div ref={loadMoreRef} style={{ height: '150px' }}>
 						{isFetchingNextPage ? (
-							<DotLottieReact src="/src/assets/TAOpm7eR8s.json" loop autoplay />
+							<DotLottieReact src="./src/assets/Animation - 1718932225127.json" loop autoplay />
 						) : (
 							''
 						)}
