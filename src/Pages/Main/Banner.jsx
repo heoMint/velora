@@ -2,7 +2,7 @@
 import ReactPlayer from 'react-player';
 import styled, { keyframes } from 'styled-components';
 import 'animate.css';
-import { Mobile, PC } from '../../hooks/useMediaQuery';
+
 const Banner = () => {
 	return (
 		<BannerWrapper>
@@ -52,6 +52,22 @@ const BannerTitle = styled.div`
 			font-weight: 400;
 		}
 	}
+	p {
+		font-size: 1.5rem;
+	}
+	@media (max-width: 767px) {
+		padding: 100px 0 50px 20px;
+		strong {
+			font-size: 2rem;
+			margin-bottom: -10px;
+			span {
+				font-weight: 400;
+			}
+		}
+		p {
+			font-size: 1.2rem;
+		}
+	}
 `;
 const VideoWrapper = styled.div`
 	display: flex;
@@ -61,9 +77,18 @@ const VideoWrapper = styled.div`
 		border-radius: 40% 0 0 0/ 60% 0 0 0;
 		object-fit: cover;
 	}
+	@media (max-width: 767px) {
+		width: 100%;
+		video {
+			border-radius: 40% 0 0 0/ 30% 0 0 0;
+		}
+	}
 `;
 const BannerWrapper = styled.div`
 	background-color: #fff;
 	display: flex;
 	justify-content: space-between;
+	@media (max-width: 767px) {
+		display: grid;
+	}
 `;
