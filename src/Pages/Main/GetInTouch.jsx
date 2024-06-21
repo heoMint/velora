@@ -5,7 +5,7 @@ const GetInTouch = () => {
 		<ImgBox>
 			<Img />
 			<TextBox>
-				<h2>Velora</h2>
+				<strong>VELORA</strong>
 				<p>HOW ELSE CAN WE HELP YOU?</p>
 				<p>Get in Touch</p>
 			</TextBox>
@@ -39,15 +39,15 @@ const TextBox = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transform: translate(0%, -100%);
+	transform: translate(0%, -120%);
 	color: white;
 	animation: ${scrollTop} 3s ease-in-out;
-	h2 {
-		margin: 0;
+	strong {
+		padding-bottom: 20px;
 		font-size: 6rem;
 	}
 	p {
 		font-size: 1.5rem;
-		margin: 0;
+		margin: 5px;
 	}
 `;
