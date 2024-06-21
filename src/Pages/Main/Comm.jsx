@@ -72,7 +72,7 @@ const Comm = () => {
 					<div ref={loadMoreRef} style={{ height: '150px' }}>
 						{isFetchingNextPage ? (
 							<DotLottieReact
-								src="/public/assets/Animation%20-%201718932225127.json"
+								src="public/assets/Animation%20-%201718932225127.json"
 								loop
 								autoplay
 							/>
