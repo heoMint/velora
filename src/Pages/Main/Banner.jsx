@@ -2,6 +2,7 @@
 import ReactPlayer from 'react-player';
 import styled, { keyframes } from 'styled-components';
 import 'animate.css';
+import { Mobile, PC } from '../../hooks/useMediaQuery';
 const Banner = () => {
 	return (
 		<BannerWrapper>
@@ -21,6 +22,8 @@ const Banner = () => {
 				width="100%"
 				height="600px"
 			/>
+
+			
 		</BannerWrapper>
 	);
 };
@@ -36,6 +39,7 @@ const opacity = keyframes`
 		opacity:1
 	}
 `;
+
 const BannerTitle = styled.div`
 	/* position: absolute;
 	top: 50%;
@@ -53,12 +57,11 @@ const BannerTitle = styled.div`
 			font-weight: 400;
 		}
 	}
-	p {
-		font-size: 1.7rem;
-	}
+
 `;
 
 const BannerWrapper = styled.div`
+
 	/* position: relative; /* 수정된 부분: absolute -> relative */
 	/* top: -90px; */
 	/* height: 70vh; */

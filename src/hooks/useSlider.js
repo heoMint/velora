@@ -39,7 +39,7 @@ export const useLankSlider = (lastIndex, intervalTime) => {
 
 		if (!isHovered) {
 			intervalId = setInterval(() => {
-				setSelected((prevSelected) => (prevSelected + 2) % lastIndex);
+				setSelected((prevSelected) => (prevSelected + 5) % lastIndex);
 			}, intervalTime);
 		}
 

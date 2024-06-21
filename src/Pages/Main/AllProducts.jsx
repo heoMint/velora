@@ -121,6 +121,8 @@ const CarouselWrapper = styled.div`
 const CardWrapper = styled.div`
 	overflow: hidden;
 	animation: ${fadeInRight} 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+	@media (max-width: 767px) {
+	}
 `;
 const Card = styled.div`
 	padding: 20px 10px;
@@ -143,6 +145,9 @@ const Img = styled.img`
 
 	background-size: cover;
 	backface-visibility: hidden;
+	@media (max-width: 767px) {
+		width: 180px;
+	}
 `;
 
 const Title = styled.div`
@@ -150,15 +155,16 @@ const Title = styled.div`
 	font-size: 2.3rem;
 	margin: 150px 0 50px;
 	color: #111;
+
 `;
 const ProductsTitle = styled.div`
 	margin-bottom: 10px;
 	font-size: 1.4rem;
-	font-weight: 500;
 	color: #111;
 `;
 const Num = styled.div`
-	color: #777;
+	font-weight: 600;
+
 `;
 
 const PriceWrapper = styled.div`
