@@ -48,8 +48,8 @@ const Lank = () => {
 					isVisible={scrollY >= 200}
 				>
 					<LankTitle>
-						<div>디바이스</div>
-						<div>LANK</div>
+						<span>디바이스</span>
+						<span>LANK</span>
 					</LankTitle>
 					<LankList>
 						<CarouselWrapper>{renderImages()}</CarouselWrapper>
@@ -94,7 +94,7 @@ const LankList = styled.div`
 	display: flex;
 `;
 const CarouselWrapper = styled.div`
-	transform: translate(13%, 0);
+
 	height: 400px;
 	width: 100%;
 	display: flex;
@@ -112,7 +112,9 @@ const CarouselWrapper = styled.div`
 
 const LankWrapper = styled.div`
 	display: flex;
-	padding-left: 50px;
+	flex-direction: column;
+
+	/* margin-left: -50px; */
 	width: 100%;
 	height: 100%;
 	flex-wrap: wrap;
@@ -134,13 +136,13 @@ const ItemWrapper = styled.div`
 `;
 const LankTitle = styled.div`
 	text-align: center;
-	font-size: 1.5rem;
+	font-size: 2.6rem;
 	font-weight: 300;
 	color: #111;
 	padding-bottom: 20px;
 	:nth-child(2) {
-		color: #ff3131;
-		font-size: 2rem;
+		color: #a85eee;
+		font-size: 3rem;
 		font-weight: 700;
 		font-style: italic;
 	}
