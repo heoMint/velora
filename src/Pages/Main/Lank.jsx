@@ -84,18 +84,27 @@ const slideTopLank = keyframes`
 const RankBackground = styled.div`
 	position: relative;
 	top: -90px;
-
 	background-image: url('/SpritePattern.png');
-	background-size: cover;
+	background-size: contain;
+`;
+const LankList = styled.div`
+	display: flex;
 `;
 const CarouselWrapper = styled.div`
+	transform: translate(13%, 0);
 	height: 400px;
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	margin-left: 100px;
+	@media (max-width: 767px) {
+		flex-wrap: wrap;
+		height: 500px;
+		padding: 30px 0;
+		transform: translateX(10%);
+	}
 `;
+
 const LankWrapper = styled.div`
 	display: flex;
 	align-items: center;
@@ -108,46 +117,71 @@ const LankWrapper = styled.div`
 		ease-in-out both;
 	transition: opacity 0.5s ease-in-out;
 `;
-const ItemWrapper = styled.div``;
+const ItemWrapper = styled.div`
+	@media (max-width: 767px) {
+		display: flex;
+	}
+`;
 const LankTitle = styled.div`
 	position: absolute;
-	top: 100px;
-	left: 80px;
+	top: 80px;
+	left: 40px;
 	text-align: left;
 
 	font-size: 1.6rem;
 	font-weight: 300;
 	:nth-child(2) {
 		color: #ff3131;
-		font-size:2rem;
+		font-size: 2rem;
 		font-weight: 700;
 		font-style: italic;
 	}
+	@media (max-width: 767px) {
+		font-size: 1.3rem;
+		top: 50px;
+		left: 30px;
+		:nth-child(2) {
+			font-size: 1.5rem;
+		}
+	}
 `;
-const LankList = styled.div``;
 
 const LankText = styled.div``;
 const CardWrapper = styled.div`
-	padding: 40px 0;
+	padding: 40px 10px;
+	@media (max-width: 767px) {
+		padding: 6px;
+	}
 `;
 const Card = styled.div`
 	display: flex;
 	text-align: center;
-
 	animation: ${slideTop} 0.3s ease-in-out;
+	@media (max-width: 767px) {
+		text-align: left;
+	}
 `;
 const ImageCard = styled.div``;
 const Img = styled.img`
-	width: 180px;
-	height: 180px;
+	width: 150px;
+	height: 150px;
 	border: 5px solid #f1f1f1;
 	border-radius: 100%;
+	@media (max-width: 767px) {
+		width: 60px;
+		height: 60px;
+	}
 `;
 
 const LankNum = styled.div`
-	padding: 10px 10px 0 0;
+	width: 40px;
+	padding-top: 10px;
+	margin-right: -10px;
 	font-size: 1.2rem;
 	font-weight: 600;
+	@media (max-width: 767px) {
+		margin-right: 10px;
+	}
 `;
 const Brand = styled.div`
 	text-align: center;
@@ -156,12 +190,22 @@ const Brand = styled.div`
 	align-items: center;
 	color: #969595;
 	padding-top: 10px;
+	@media (max-width: 767px) {
+		justify-content: flex-start;
+		padding-left: 10px;
+	}
 `;
 const ProductsTitle = styled.div`
 	display: grid;
-	align-items: center;
+	align-items: flex-start;
 	width: 200px;
 	padding: 10px 0;
 	font-size: 1.3rem;
 	font-weight: 600;
+	@media (max-width: 767px) {
+		width: 200px;
+		padding-left: 10px;
+		font-size: 1.2rem;
+		justify-content: flex-start;
+	}
 `;
