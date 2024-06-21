@@ -88,7 +88,6 @@ export const useCommunityScroll = () => {
 		const handleScroll = () => {
 			if (!isInitialLoad && !hasScrolledPast) {
 				setScrollY(window.scrollY);
-				console.log(window.scrollY);
 
 				if (window.scrollY >= 2000) {
 					setIsContentCardItem(true);

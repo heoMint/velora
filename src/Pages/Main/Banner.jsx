@@ -15,7 +15,7 @@ const Banner = () => {
 				</div>
 			</BannerTitle>
 			<ReactPlayer
-				url="/7234120-uhd_3840_2160_30fps.mp4"
+				url="https://youtu.be/dNtojNULqyg?si=0DrKpL6yTm2F6m46"
 				playing={true}
 				muted={true}
 				loop={true}

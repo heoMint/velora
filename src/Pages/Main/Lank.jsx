@@ -6,7 +6,7 @@ import { useLankScroll } from '../../hooks/useScroll';
 const Lank = () => {
 	const lastIndex = 10;
 	const pageSize = 4; // 한 페이지에 보여질 이미지 개수
-	const intervalTime = 300000;
+	const intervalTime = 5000;
 	const { selected, setIsHovered } = useLankSlider(lastIndex, intervalTime);
 	const { isContentCardItem } = useLankScroll();
 
@@ -87,7 +87,7 @@ const RankBackground = styled.div`
 	/* background-image: url('/SpritePattern.png'); */
 	overflow: hidden;
 	background-size: cover;
-	padding: 100px 0;
+	margin: 100px 0;
 `;
 
 const LankList = styled.div`
@@ -101,43 +101,43 @@ const CarouselWrapper = styled.div`
 	justify-content: space-around;
 	align-items: center;
 
-	margin-left: 220px;
-
 	@media (max-width: 767px) {
 		flex-wrap: wrap;
 		height: 500px;
 		padding: 30px 0;
-		transform: translateX(10%);
+
+		transform: translateX(6%);
 	}
 `;
 
 const LankWrapper = styled.div`
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	padding-left: 50px;
 	width: 100%;
 	height: 100%;
-
+	flex-wrap: wrap;
 	opacity: ${(props) => (props.isVisible ? 1 : 0)};
 	animation: ${(props) => (props.isVisible ? slideTopLank : 'none')} 0.6s
 		ease-in-out both;
 	transition: opacity 0.5s ease-in-out;
+	@media (max-width: 767px) {
+		padding-left: 0px;
+		justify-content: center;
+	}
 `;
 const ItemWrapper = styled.div`
+	display: grid;
+	justify-items: center;
 	@media (max-width: 767px) {
 		display: flex;
 	}
 `;
 const LankTitle = styled.div`
-	position: absolute;
-
-	top: 100px;
-	left: 0;
-	text-align: left;
-
-	font-size: 1.6rem;
+	text-align: center;
+	font-size: 1.5rem;
 	font-weight: 300;
 	color: #111;
+	padding-bottom: 20px;
 	:nth-child(2) {
 		color: #ff3131;
 		font-size: 2rem;
@@ -145,11 +145,10 @@ const LankTitle = styled.div`
 		font-style: italic;
 	}
 	@media (max-width: 767px) {
-		font-size: 1.3rem;
-		top: 50px;
-		left: 30px;
+		font-size: 1.5rem;
+
 		:nth-child(2) {
-			font-size: 1.5rem;
+			font-size: 1.9rem;
 		}
 	}
 `;
@@ -179,17 +178,19 @@ const ImageCard = styled.div`
 	height: 180px;
 	margin-bottom: 10px;
 	border: 1px solid #e4e4e4;
+	border-radius: 100%;
+	@media (max-width: 767px) {
+		width: 100px;
+		height: 100px;
+	}
 `;
 
 const Img = styled.img`
-	width: 150px;
-	height: 150px;
-	border: 5px solid #f1f1f1;
-	border-radius: 100%;
-	@media (max-width: 767px) {
-		width: 60px;
-		height: 60px;
-	}
+	margin: auto;
+	display: block;
+	width: 70%;
+	/* height: 150px; */
+	/* border: 5px solid #f1f1f1; */
 `;
 
 const LankNum = styled.div`
@@ -202,7 +203,7 @@ const LankNum = styled.div`
 	color: #111;
 
 	@media (max-width: 767px) {
-		margin-right: 10px;
+		font-size: 1rem;
 	}
 `;
 const Brand = styled.div`
@@ -220,7 +221,6 @@ const Brand = styled.div`
 const ProductsTitle = styled.div`
 	display: grid;
 	align-items: flex-start;
-
 	width: 200px;
 	height: 70px;
 	padding: 10px 0;
@@ -229,9 +229,9 @@ const ProductsTitle = styled.div`
 	color: #111;
 
 	@media (max-width: 767px) {
-		width: 200px;
+		width: 150px;
 		padding-left: 10px;
-		font-size: 1.2rem;
+		font-size: 1rem;
 		justify-content: flex-start;
 	}
 `;

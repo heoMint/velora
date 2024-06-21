@@ -3,16 +3,17 @@ import { ALLPRODUCTS } from '../../context/Mockup';
 import { useProductsSlider } from '../../hooks/useSlider';
 import { useProductsScroll } from '../../hooks/useScroll';
 import styled, { keyframes } from 'styled-components';
+import { useState } from 'react';
 
 const AllProducts = () => {
+	const [isHover, setIsHover] = useState(null);
+
 	const lastIndex = 5;
 	const pageSize = 3; // 한 페이지에 보여질 이미지 개수
 	const intervalTime = 300000; // Interval time in milliseconds
 
-	const { selected, setSelected, setIsHovered } = useProductsSlider(
-		lastIndex,
-		intervalTime,
-	);
+	const { selected, setIsHovered } = useProductsSlider(lastIndex, intervalTime);
+
 	const { scrollY, isContentCardItem } = useProductsScroll();
 	// const handlerPrev = () => {
 	// 	setSelected((prevSelected) => (prevSelected - 1 + lastIndex) % lastIndex);
@@ -24,8 +25,15 @@ const AllProducts = () => {
 	const renderImageCard = (image, index) => (
 		<CardWrapper key={image.id}>
 			<Card isVisible={isContentCardItem}>
-				<ImageCard>
-					<Img src={image.url} alt={`Image ${index}`} />
+				<ImageCard
+					onMouseEnter={() => setIsHover(index)}
+					onMouseLeave={() => setIsHover(null)}
+				>
+					<Img
+						src={image.url}
+						alt={`Image ${index}`}
+						isHover={isHover === index}
+					/>
 				</ImageCard>
 				<ProductsTitle>{image.title}</ProductsTitle>
 				<PriceWrapper>
@@ -114,7 +122,7 @@ const CarouselWrapper = styled.div`
 	flex-wrap: wrap;
 	display: flex;
 	justify-content: center;
-	overflow: hidden;
+	overflow: visible;
 	position: relative;
 	margin-bottom: 100px;
 `;
@@ -138,15 +146,22 @@ const ImageCard = styled.div`
 	height: 300px;
 	border: 1px solid #e4e4e4;
 	margin-bottom: 20px;
+	@media (max-width: 767px) {
+		width: 180px;
+		height: 180px;
+	}
 `;
 const Img = styled.img`
 	width: 80%;
 	border-radius: 5px;
-
 	background-size: cover;
 	backface-visibility: hidden;
+
+	transform: ${(props) => (props.isHover ? 'scale(1.2)' : 'scale(1)')};
+	transition: transform 0.6s ease-in-out;
+	z-index: ${(props) => (props.isHover ? 1 : 0)};
 	@media (max-width: 767px) {
-		width: 180px;
+		width: 80%;
 	}
 `;
 
@@ -159,10 +174,14 @@ const Title = styled.div`
 const ProductsTitle = styled.div`
 	margin-bottom: 10px;
 	font-size: 1.4rem;
+	font-weight: 600;
 	color: #111;
+	@media (max-width: 767px) {
+		font-size: 1.2rem;
+	}
 `;
 const Num = styled.div`
-	font-weight: 600;
+	/* font-weight: 600; */
 `;
 
 const PriceWrapper = styled.div`
