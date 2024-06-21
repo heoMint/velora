@@ -2,16 +2,11 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FaBars, FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import { Mobile, PC } from '../hooks/useMediaQuery';
-import { FiSearch, FiShoppingCart, FiUser } from 'react-icons/fi';
 
 const Header = () => {
 	const [isChecked, setIsChecked] = useState(false);
-
-	const onClickEvent = () => {
-		setIsChecked(!isChecked);
-	};
 
 	return (
 		<NavWrapper>
@@ -32,9 +27,9 @@ const Header = () => {
 						<li>
 							<Link to="/community">Community</Link>
 						</li>
-						{/* <li>
+						<li>
 							{isChecked === false ? <button>KR</button> : <button>EN</button>}
-						</li> */}
+						</li>
 					</Depth>
 				</PC>
 				<Mobile>
@@ -43,54 +38,30 @@ const Header = () => {
 					</MenuIcon>
 				</Mobile>
 			</Nav>
-			<Util>
-				<Link to="/login">
-					<FiUser />
-				</Link>
-				<Link to="/signup">
-					<FiShoppingCart />
-				</Link>
-				<Link onClick={onClickEvent}>
-					<FiSearch />
-				</Link>
-			</Util>
 		</NavWrapper>
 	);
 };
 
 export default Header;
 
-const Util = styled.div`
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	a {
-		display: block;
-		padding: 0 10px;
-		font-size: 1.4rem;
-		color: #000;
-	}
-`;
-
-const NavWrapper = styled.header`
-	position: fixed;
-	top: 0;
+const NavWrapper = styled.div`
+	position: relative;
+	top: -7px;
 	left: 0;
-	width: 100%;
 	height: 80px;
-	padding: 0 30px;
+	width: 100%;
+
 	z-index: 50;
 	cursor: pointer;
 
 	display: flex;
 	align-items: center;
 
-	justify-content: space-between;
-	background: #fff;
-	/* background: rgba(255, 255, 255, 0.13);
+	justify-content: flex-end;
+	background: rgba(255, 255, 255, 0.13);
 	backdrop-filter: blur(2px);
-	-webkit-backdrop-filter: blur(3px); */
-	border-bottom: 1px solid #eee;
+	-webkit-backdrop-filter: blur(3px);
+	border: 1px solid rgba(255, 255, 255, 0.1);
 `;
 
 const Nav = styled.div`
@@ -105,9 +76,12 @@ const Depth = styled.ul`
 	padding-right: 20px;
 	color: var(--gray-300);
 	list-style-type: none;
+
+	li {
+		width: 150px;
+	}
 	a {
-		padding: 20px;
-		color: #000; /* 링크의 색상 제거 */
+		color: inherit; /* 링크의 색상 제거 */
 		text-align: center;
 		text-decoration: none; /* 링크의 밑줄 제거 */
 	}
@@ -124,8 +98,7 @@ const Depth = styled.ul`
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		/* color: var(--gray-300); */
-		color: #000;
+		color: var(--gray-300);
 
 		border: 1px solid rgb(255, 255, 255, 0.6);
 		border-radius: 3px;
@@ -140,7 +113,10 @@ const Depth = styled.ul`
 	}
 `;
 
-const Log = styled.h1`
+const Log = styled.div`
+	position: absolute;
+	top: 35%;
+	left: 30px;
 	img {
 		width: 100px;
 	}

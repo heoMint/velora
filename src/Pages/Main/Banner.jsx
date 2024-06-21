@@ -6,24 +6,26 @@ import { Mobile, PC } from '../../hooks/useMediaQuery';
 const Banner = () => {
 	return (
 		<BannerWrapper>
-			<BannerTitle>
-				<div className="container">
-					<strong>
-						<span>벨로나와 함께</span> <br /> 당신의 광채를 발견해보세요!
-					</strong>
-					<p>Bellona - 아름다움과 혁신이 만나는 곳.</p>
-				</div>
-			</BannerTitle>
 			<ReactPlayer
 				url="/7234120-uhd_3840_2160_30fps.mp4"
 				playing={true}
 				muted={true}
 				loop={true}
 				width="100%"
-				height="600px"
+				height="100%"
 			/>
-
-			
+			<PC>
+				<PcBannerTitle>
+					<h1>벨로나와 함께 당신의 광채를 발견해보세요!</h1>
+					<p>Bellona - 아름다움과 혁신이 만나는 곳.</p>
+				</PcBannerTitle>
+			</PC>
+			<Mobile>
+				<MobileBannerTitle>
+					<h1>벨로나와 함께 당신의 광채를 발견해보세요!</h1>
+					<p>Bellona - 아름다움과 혁신이 만나는 곳.</p>
+				</MobileBannerTitle>
+			</Mobile>
 		</BannerWrapper>
 	);
 };
@@ -39,35 +41,42 @@ const opacity = keyframes`
 		opacity:1
 	}
 `;
+const PcBannerTitle = styled.div`
+	position: absolute;
+	top: 40%;
+	left: 40%;
 
-const BannerTitle = styled.div`
-	/* position: absolute;
-	top: 50%;
-	transform: translateY(-30%); */
-	/* margin-left: 100px; */
-	padding: 60px 0;
 	color: #222;
 	/* color: white; */
 
 	animation: ${opacity} 2s ease;
-	strong {
-		font-size: 3.5rem;
+	h1 {
+		font-size: 2.5rem;
 		margin-bottom: -10px;
-		span {
-			font-weight: 400;
-		}
 	}
-
+	p {
+		font-size: 1.5rem;
+	}
 `;
+const MobileBannerTitle = styled.div`
+	position: absolute;
+	top: 40%;
+	left: 40%;
 
-const BannerWrapper = styled.div`
+	color: #222;
+	/* color: white; */
 
-	/* position: relative; /* 수정된 부분: absolute -> relative */
-	/* top: -90px; */
-	/* height: 70vh; */
-	background-color: #fff;
-	video {
-		height: 800px;
-		object-fit: cover;
+	animation: ${opacity} 2s ease;
+	h1 {
+		font-size: 1.5rem;
+		margin-bottom: -10px;
 	}
+	p {
+		font-size: 1rem;
+	}
+`;
+const BannerWrapper = styled.div`
+	position: relative;
+	top: -90px;
+	height: 100%;
 `;
