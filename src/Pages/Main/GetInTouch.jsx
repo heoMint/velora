@@ -50,4 +50,9 @@ const TextBox = styled.div`
 		font-size: 1.5rem;
 		margin: 5px;
 	}
+	@media (max-width: 767px) {
+		strong {
+			font-size: 5rem;
+		}
+	}
 `;

@@ -7,8 +7,7 @@ const Footer = () => {
 		<FooterWrapper>
 			<FooBoxWrapper>
 				<FooBox>
-					<span>냥글냥글 소개</span>
-					<span>크리에이터신청</span>
+					<span>벨로라 소개</span>
 					<span>제휴문의</span>
 					<span>이용약관 </span>
 					<span>개인정보처리방침 </span>
@@ -27,8 +26,7 @@ const Footer = () => {
 				<FooBox>
 					<div>
 						벨로라 통신판매중개자로서 중개하는 거래에 대하여 책임을 부담하지
-						않습니다. 단, 냥글냥글이 판매자로 등록/판매한 상품은 판매자로서
-						책임을 부담합니다.
+						않습니다. 단, 벨로라의 판매자로 등록/판매한 상품은 판매자로서 책임을 부담합니다.
 					</div>
 					<div>
 						벨로라 사이트의 상품/판매자/쇼핑정보, 컨텐츠, UI 등에 대한 무단
@@ -49,11 +47,14 @@ const Footer = () => {
 export default Footer;
 
 const FooterWrapper = styled.div`
+	position: relative;
+	bottom: 0;
 	height: 400px;
-	background-color: #eeeeee;
+	
 `;
 const FooBoxWrapper = styled.div`
-	padding-top: 30px;
+	padding: 30px 0;
+	background-color: #eeeeee;
 `;
 const FooBox = styled.div`
 	padding: 30px 0 0 50px;

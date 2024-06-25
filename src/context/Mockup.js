@@ -35,6 +35,41 @@ export const ALLPRODUCTS = [
 		num: '1ea',
 		price: '459,000원',
 	},
+	{
+		id: 6,
+		url: '/trinity.jpeg',
+		title: '트리니티',
+		num: '1ea',
+		price: '244,000원',
+	},
+	{
+		id: 7,
+		url: '/agr-usseara.jpeg',
+		title: '에이지알 유쎄라 딥 샷',
+		num: '1ea',
+		price: '500,000원',
+	},
+	{
+		id: 8,
+		url: '/skinlight.png',
+		title: '스킨라이트 테라피',
+		num: '1ea',
+		price: '200,000원',
+	},
+	{
+		id: 9,
+		url: '/agr-thema.jpeg',
+		title: '에이지알 더마 EMS 샷',
+		num: '1ea',
+		price: '458,000원',
+	},
+	{
+		id: 10,
+		url: '/madeca.jpeg',
+		title: '마데카 프라임',
+		num: '1ea',
+		price: '459,000원',
+	},
 ];
 
 export const LANKPRODUCTS = [
