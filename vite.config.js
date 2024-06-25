@@ -8,7 +8,7 @@ export default defineConfig({
 	assetsInclude: ['**/*.jpeg', '**/*.png', '**/*.jpg'],
 	build: {
 		rollupOptions: {
-			external: ['gsap'],
+			external: ['gsap', 'gsap/ScrollTrigger'],
 		},
 	},
 });
