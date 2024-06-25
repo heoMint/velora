@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { useInfiniteQuery } from 'react-query';
 import { BsChatRightQuote } from 'react-icons/bs';
 import { fetchComments as fetchCommentsData } from '../../hooks/queries/fetchComments';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const Community = () => {
