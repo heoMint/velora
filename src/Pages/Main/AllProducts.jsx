@@ -9,7 +9,7 @@ const AllProducts = () => {
 
 	const lastIndex = 5;
 	const pageSize = 3; // 한 페이지에 보여질 이미지 개수
-	const intervalTime = 300000; // Interval time in milliseconds
+	const intervalTime = 3000; // Interval time in milliseconds
 
 	const { selected, setIsHovered } = useProductsSlider(lastIndex, intervalTime);
 
