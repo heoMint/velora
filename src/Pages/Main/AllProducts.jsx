@@ -1,9 +1,8 @@
-import { PiArrowLeftThin, PiArrowRightThin } from 'react-icons/pi';
+import { useState } from 'react';
 import { ALLPRODUCTS } from '../../context/Mockup';
 import { useProductsSlider } from '../../hooks/useSlider';
 import { useProductsScroll } from '../../hooks/useScroll';
 import styled, { keyframes } from 'styled-components';
-import { useState } from 'react';
 
 const AllProducts = () => {
 	const [isHover, setIsHover] = useState(null);

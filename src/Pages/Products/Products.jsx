@@ -1,9 +1,8 @@
+import { useState } from 'react';
 import { ALLPRODUCTS } from '../../context/Mockup';
 import { useProductsSlider } from '../../hooks/useSlider';
 import Pagination from 'react-js-pagination';
-
 import styled from 'styled-components';
-import { useState } from 'react';
 
 const Products = () => {
 	const [isHover, setIsHover] = useState(null);
