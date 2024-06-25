@@ -40,7 +40,14 @@ const Community = () => {
 		};
 	}, [hasNextPage, fetchNextPage]);
 	// console.log('Data:', data);
-	if (isLoading) return <div>Loading...</div>;
+	if (isLoading) return (
+		<DotLottieReact
+			src="/iIYHf59gd6.json"
+			loop
+			autoplay
+			backgroundColor="#fff7e6"
+		/>
+	);
 	if (isError) return <div>Error fetching data</div>;
 
 	return (

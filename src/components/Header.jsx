@@ -1,53 +1,62 @@
-/* eslint-disable import/no-unresolved */
-import { useState } from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { Mobile, PC } from '../hooks/useMediaQuery';
 import { FiSearch, FiShoppingCart, FiUser } from 'react-icons/fi';
+import styled from 'styled-components';
 
 const Header = () => {
-	const [isActive, setIsActive] = useState(false);
-
-	const onClickEvent = () => {
-		setIsActive(!isActive);
+	const activeStyle = {
+		color: '#8263ff',
 	};
 
 	return (
 		<NavWrapper>
 			<Log>
-				<Link to="/">
+				<NavLink to="/">
 					<img src="Velora.png" alt="Logo" />
-				</Link>
+				</NavLink>
 			</Log>
 
 			<PC>
 				<Depth>
-					<li className={isActive ? 'active' : ''} onClick={onClickEvent}>
-						<Link to="/aboutus">About Us</Link>
+					<li>
+						<NavLink
+							to="/aboutus"
+							style={({ isActive }) => (isActive ? activeStyle : {})}
+						>
+							About Us
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/products">Products</Link>
+						<NavLink
+							to="/products"
+							style={({ isActive }) => (isActive ? activeStyle : {})}
+						>
+							Products
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/community">Community</Link>
+						<NavLink
+							to="/community"
+							style={({ isActive }) => (isActive ? activeStyle : {})}
+						>
+							Community
+						</NavLink>
 					</li>
 				</Depth>
 
-				{/* <li>
-							{isChecked === false ? <button>KR</button> : <button>EN</button>}
-						</li> */}
+				
 				<Util>
-					<Link to="/login">signin</Link>
-					<Link to="/mypage">
+					<NavLink to="/login">signin</NavLink>
+					<NavLink to="/mypage">
 						<FiUser />
-					</Link>
-					<Link to="/shoppingCart">
+					</NavLink>
+					<NavLink to="/shoppingCart">
 						<FiShoppingCart />
-					</Link>
-					<Link>
+					</NavLink>
+					<NavLink>
 						<FiSearch />
-					</Link>
+					</NavLink>
 				</Util>
 			</PC>
 			<Mobile>
@@ -88,57 +97,32 @@ const Depth = styled.ul`
 
 	li {
 		position: relative; /* Ensure relative positioning for pseudo-element */
-		&:hover {
-			a::after {
-				transform: scaleX(1); /* Expand underline on hover */
-			}
-		}
+
 	}
+
 	a {
 		padding: 20px;
-		color: #000; /* Link text color */
-		text-align: center;
-		text-decoration: none; /* Remove underline from link */
-		position: relative; /* Ensure relative positioning for pseudo-element */
-		&:hover {
-			cursor: pointer;
-		}
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 6px; /* Adjust position of underline */
-			left: 12%;
-			width: 75%;
-			border-bottom: 2px solid #000; /* Underline style */
-			transform: scaleX(0); /* Initial state for transition effect */
-			transform-origin: 0% 50%; /* Set transform origin */
-			transition: transform 250ms ease-in-out; /* Transition effect */
-		}
-	}
-	&.active a::after {
-		transform: scaleX(1);
-	}
-
-	ul {
-		display: none;
-	}
-	button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		/* color: var(--gray-300); */
 		color: #000;
+		text-align: center;
+		text-decoration: none;
+		position: relative;
+		border: 2px solid transparent;
+		left: 12%;
+		width: 75%;
 
-		border: 1px solid rgb(255, 255, 255, 0.6);
-		border-radius: 3px;
-		background-color: transparent;
-		width: 50px;
-		height: 30px;
+		button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			/* color: var(--gray-300); */
+			color: #000;
 
-		&:hover {
-			/* color:var(--point-green); */
-			cursor: pointer;
+			border: 1px solid rgb(255, 255, 255, 0.6);
+			border-radius: 3px;
+			background-color: transparent;
+			width: 50px;
+			height: 30px;
 		}
 	}
 `;
