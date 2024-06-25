@@ -15,7 +15,7 @@ const Header = () => {
 		setIsOpened(true);
 	};
 
-	출처: https: return (
+	return (
 		<NavWrapper>
 			<Log>
 				<NavLink to="/">
