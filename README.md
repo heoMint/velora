@@ -1,6 +1,6 @@
 # velora
 
-> 뷰티 디바이스 사용 순위를 업로드 커뮤니티 👉 사이트주소
+> 뷰티 디바이스 사용 순위를 업로드 커뮤니티 👉 [VELORA](https://velora.netlify.app/)
 
 ## 📖 Description
 

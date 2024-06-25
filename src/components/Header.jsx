@@ -9,7 +9,12 @@ const Header = () => {
 		color: '#8263ff',
 	};
 
-	return (
+	const [isOpened, setIsOpened] = useState(false);
+	const toggleSide = () => {
+		setIsOpened(true);
+	};
+
+	출처: https: return (
 		<NavWrapper>
 			<Log>
 				<NavLink to="/">
@@ -45,7 +50,6 @@ const Header = () => {
 					</li>
 				</Depth>
 
-				
 				<Util>
 					<NavLink to="/login">signin</NavLink>
 					<NavLink to="/mypage">
@@ -97,7 +101,6 @@ const Depth = styled.ul`
 
 	li {
 		position: relative; /* Ensure relative positioning for pseudo-element */
-
 	}
 
 	a {

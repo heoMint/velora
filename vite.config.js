@@ -6,4 +6,9 @@ export default defineConfig({
 	plugins: [react()],
 
 	assetsInclude: ['**/*.jpeg', '**/*.png', '**/*.jpg'],
+	build: {
+		rollupOptions: {
+			external: ['gsap'],
+		},
+	},
 });
