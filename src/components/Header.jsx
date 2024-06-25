@@ -7,7 +7,8 @@ import styled from 'styled-components';
 
 const Header = () => {
 	const activeStyle = {
-		color: '#8263ff',
+		color: 'rgb(116, 0, 204,0.8)',
+		borderRadius: '30px 0 30px 0 /30px 0 30px 0',
 	};
 
 	const [isOpened, setIsOpened] = useState(false);
