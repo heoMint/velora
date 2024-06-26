@@ -21,7 +21,7 @@ const Banner = () => {
 					muted={true}
 					loop={true}
 					width="100%"
-					height="600px"
+					height="100%"
 				/>
 			</VideoWrapper>
 		</BannerWrapper>
@@ -73,12 +73,16 @@ const VideoWrapper = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	width: 60%;
+	height: 600px;
 	video {
 		border-radius: 40% 0 0 0/ 60% 0 0 0;
 		object-fit: cover;
+		width: 100%;
+		height: 100%;
 	}
 	@media (max-width: 767px) {
 		width: 100%;
+		height: auto;
 		video {
 			border-radius: 40% 0 0 0/ 30% 0 0 0;
 		}
@@ -89,6 +93,6 @@ const BannerWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	@media (max-width: 767px) {
-		display: grid;
+		flex-direction: column;
 	}
 `;
