@@ -145,11 +145,16 @@ const Depth = styled.ul`
 		overflow: hidden;
 		transition: max-height 0.3s ease-out;
 		max-height: ${(props) => (props.isToggled ? '100vh' : '0')};
+
+		::-webkit-scrollbar {
+			display: none;
+		}
+
 		li {
 			display: flex;
 			padding: 0px;
 			width: 100%;
-
+		
 			a {
 				font-size: 1.5rem;
 				width: 100%;
