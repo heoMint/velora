@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
-import { Mobile, PC } from '../hooks/useMediaQuery';
+// import { Mobile, PC } from '../hooks/useMediaQuery';
 import { FiSearch, FiShoppingCart, FiUser } from 'react-icons/fi';
 import styled from 'styled-components';
 
@@ -11,65 +11,64 @@ const Header = () => {
 		borderRadius: '30px 0 30px 0 /30px 0 30px 0',
 	};
 
-	const [isOpened, setIsOpened] = useState(false);
-	const toggleSide = () => {
-		setIsOpened(true);
+	const [isToggled, setIsToggled] = useState(false);
+
+	const handleToggleClick = () => {
+		setIsToggled(!isToggled);
 	};
 
+	const handleLinkClick = () => {
+		setIsToggled(false); // 메뉴 선택 시 사이드바 제거
+	};
 	return (
 		<NavWrapper>
 			<Log>
-				<NavLink to="/">
+				<NavLink to="/" onClick={handleLinkClick}>
 					<img src="Velora.png" alt="Logo" />
 				</NavLink>
 			</Log>
 
-			<PC>
-				<Depth>
-					<li>
-						<NavLink
-							to="/aboutus"
-							style={({ isActive }) => (isActive ? activeStyle : {})}
-						>
-							About Us
-						</NavLink>
-					</li>
-					<li>
-						<NavLink
-							to="/products"
-							style={({ isActive }) => (isActive ? activeStyle : {})}
-						>
-							Products
-						</NavLink>
-					</li>
-					<li>
-						<NavLink
-							to="/community"
-							style={({ isActive }) => (isActive ? activeStyle : {})}
-						>
-							Community
-						</NavLink>
-					</li>
-				</Depth>
-
-				<Util>
-					<NavLink to="/login">signin</NavLink>
-					<NavLink to="/mypage">
-						<FiUser />
+			<Depth isToggled={isToggled} onClick={handleLinkClick}>
+				<li>
+					<NavLink
+						to="/aboutus"
+						style={({ isActive }) => (isActive ? activeStyle : {})}
+					>
+						About Us
 					</NavLink>
-					<NavLink to="/shoppingCart">
-						<FiShoppingCart />
+				</li>
+				<li>
+					<NavLink
+						to="/products"
+						style={({ isActive }) => (isActive ? activeStyle : {})}
+					>
+						Products
 					</NavLink>
-					<NavLink>
-						<FiSearch />
+				</li>
+				<li>
+					<NavLink
+						to="/community"
+						style={({ isActive }) => (isActive ? activeStyle : {})}
+					>
+						Community
 					</NavLink>
-				</Util>
-			</PC>
-			<Mobile>
-				<MenuIcon>
-					<FaBars />
-				</MenuIcon>
-			</Mobile>
+				</li>
+			</Depth>
+			<Util>
+				<NavLink to="/login">signin</NavLink>
+				<NavLink to="/mypage">
+					<FiUser />
+				</NavLink>
+				<NavLink to="/shoppingCart">
+					<FiShoppingCart />
+				</NavLink>
+				<NavLink>
+					<FiSearch />
+				</NavLink>
+			</Util>
+			<Toggle onClick={handleToggleClick}>
+				<FaBars />
+			</Toggle>
 		</NavWrapper>
 	);
 };
@@ -130,6 +129,36 @@ const Depth = styled.ul`
 			height: 30px;
 		}
 	}
+	// 헤더 메뉴 side bar로 전환시
+	@media (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+		/* justify-content: center; */
+		position: absolute;
+		top: 80px; /* Align with header height */
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		padding: 0px;
+
+		background-color: white;
+		overflow: hidden;
+		transition: max-height 0.3s ease-out;
+		max-height: ${(props) => (props.isToggled ? '100vh' : '0')};
+		li {
+			display: flex;
+			padding: 0px;
+			width: 100%;
+
+			a {
+				font-size: 1.5rem;
+				width: 100%;
+				left: 0;
+				border: none;
+				color: black;
+			}
+		}
+	}
 `;
 const Util = styled.div`
 	display: flex;
@@ -144,6 +173,9 @@ const Util = styled.div`
 		padding: 0 10px;
 		color: #000;
 	}
+	@media (max-width: 768px) {
+		display: none;
+	}
 `;
 
 const Log = styled.h1`
@@ -155,13 +187,14 @@ const Log = styled.h1`
 	}
 `;
 
-const MenuIcon = styled.button`
-	display: flex;
-	align-items: center;
-	padding-right: 50px;
-
-	border-style: none;
-	background-color: transparent;
+const Toggle = styled.button`
+	display: none;
+	border: none;
+	background: none;
 	font-size: 24px;
 	cursor: pointer;
+
+	@media (max-width: 768px) {
+		display: block;
+	}
 `;
